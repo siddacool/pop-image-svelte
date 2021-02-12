@@ -19,6 +19,10 @@
     border-radius: inherit;
     height: var(--unit-5);
 
+    @include onDesktop {
+      width: 400px;
+    }
+
     :global(.paper) {
       height: 100%;
     }
@@ -39,9 +43,6 @@
       &:focus {
         outline: none;
       }
-    }
-
-    @include onDesktop {
     }
   }
 </style>

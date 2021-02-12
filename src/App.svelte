@@ -3,7 +3,11 @@
 </script>
 
 <div class="App">
-  <header class="sidePadding"><TagSearch /></header>
+  <header class="sidePadding">
+    <section class="main-control">
+      <TagSearch />
+    </section>
+  </header>
   <main>main</main>
   <nav>nav</nav>
 </div>
@@ -54,6 +58,10 @@
     padding-top: var(--unit-3);
     font-size: 16px;
     background-color: var(--color-grey-10);
+
+    @include onTablet {
+      padding-top: var(--unit-4);
+    }
   }
 
   :global(.sidePadding) {
@@ -61,6 +69,20 @@
 
     @include onTablet {
       --side-padding-padding: var(--unit-3);
+    }
+  }
+
+  header {
+    margin-bottom: var(--unit-3);
+    @include onTablet {
+      margin-bottom: var(--unit-4);
+    }
+
+    .main-control {
+      @include onDesktop {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 </style>
