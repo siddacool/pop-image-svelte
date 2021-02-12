@@ -8,7 +8,12 @@
       <TagSearch />
     </section>
   </header>
-  <main>main</main>
+  <main class="fullscreen">
+    <img
+      src="https://images.unsplash.com/photo-1612242879330-cd06b2696e56"
+      alt="Unsplash random"
+    />
+  </main>
   <nav>nav</nav>
 </div>
 
@@ -73,6 +78,8 @@
   }
 
   header {
+    z-index: 50;
+    position: relative;
     margin-bottom: var(--unit-3);
     @include onTablet {
       margin-bottom: var(--unit-4);
@@ -83,6 +90,29 @@
         display: flex;
         justify-content: center;
       }
+    }
+  }
+
+  :global(main) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    &.fullscreen {
+      img {
+        object-fit: cover;
+      }
+    }
+
+    img {
+      height: inherit;
+      width: inherit;
+      display: flex;
+      object-fit: scale-down;
+      object-position: center;
     }
   }
 </style>
