@@ -8,7 +8,7 @@
       <TagSearch />
     </section>
   </header>
-  <main class="fullscreen">
+  <main class="">
     <img
       src="https://images.unsplash.com/photo-1612242879330-cd06b2696e56"
       alt="Unsplash random"
@@ -96,12 +96,14 @@
   :global(main) {
     display: flex;
     position: fixed;
-    top: 0;
+    top: 108px;
     left: 0;
-    height: 100vh;
+    height: calc(100vh - 150px);
     width: 100vw;
 
     &.fullscreen {
+      top: 0;
+      height: 100vh;
       img {
         object-fit: cover;
       }
